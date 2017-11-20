@@ -1,0 +1,33 @@
+<template>
+  <div class="card topMargin">
+    <div class="card-body">
+      <div class="row">
+        <span class="col">
+          <span class="rightMargin pull-right">
+            <i click.trigger="logout()"  class="fa fa-sign-out fa-lg" aria-hidden="true"></i>
+          </span>
+          <span class=" rightMargin pull-right">
+            <i click.trigger="createPic()"  class="fa fa-plus fa-lg" aria-hidden="true"></i>
+          </span>
+        </span>
+      </div>
+    </div>
+  </div>
+  <div show.bind="pics.picsArray.length">
+    <table class="table">
+        <thead>
+          <tr>
+            <th>ToDo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr repeat.for = "pic of pics.picsArray">
+            <th>${pics.pic}</th>
+          </tr>
+        </tbody>
+      </table>
+  </div>
+  <div show.bind="!pics.picsArray.length">
+    <h2>Apparently, you don't have Pics on your gallery!</h2>
+  </div>
+</template>
