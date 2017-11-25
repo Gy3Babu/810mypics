@@ -28,26 +28,50 @@ var localLogin = new localStrategy(localOptions, function(email, password, next)
 	.catch(function(err){return next(err);});
 });
 
+passport.use(localLogin);
+
+var jwtOptions = {
+	jwtFromRequest: extractJwt. fromAuthHeaderAsBearerToken(),
+	secretOrKey: config.secret,
+	issuer : 'com.microsoft.example',
+	audience : "com.chirps.www"
+};
+
+var jwtLogin = new jwtStrategy(jwtOptions, function(payload, next){
+  User.findById(payload._id).exec()
+  .then(function(user){
+    if (user){
+      return next(null, user);
+    } else {
+      return next(null, false);
+    }
+  })
+  .catch(function(err){ return next(err);});
+});
+
+passport.use(jwtLogin);
+
+
 
 generateToken = function(user){
-    return jwt.sign(user, config.secret, {
-      expiresIn: 10000
-    });
+  return jwt.sign(user, config.secret, {
+    expiresIn: 10000
+  });
 };
 
 setUserInfo = function(req){
-    return {
-	    _id: req._id,
-	    firstName: req.firstName,
-	    lastName: req.lastName,
-	    email: req.email,
-	    issuer: "edu.uwm"
-  	};
+  return {
+    _id: req._id,
+    firstName: req.firstName,
+    lastName: req.lastName,
+    email: req.email,
+    issuer: "edu.uwm"
+	};
 };
 
 login = function(req, res, next) {
-var userInfo = setUserInfo(req.user);
-res.status(200).json({ token: generateToken(userInfo), user: req.user  });
+	var userInfo = setUserInfo(req.user);
+	res.status(200).json({ token: generateToken(userInfo), user: req.user  });
 };
 
 passport.use(localLogin);

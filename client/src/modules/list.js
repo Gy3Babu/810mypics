@@ -14,16 +14,30 @@ export class Wall {
     this.showList = true;
   }
 
+  back(){
+   this.showList = true; 
+  }
+
+
   logout(){
-  	this.router.navigate('home');
+    sessionStorage.removeItem('user');
+    this.auth.logout();
   }
 
   createPic(){	
     this.picObj = {
-      file: "",
-      userId: 0,//this.user._id,
+      name: "",
+      userID: this.user._id,
     }
   	this.showList = false;		
+  }
+
+  changeFiles(){
+    this.filesToUpload = new Array(); 
+    this.filesToUpload.push(this.files[0]);
+  }
+   removeFile(index){
+    this.filesToUpload.splice(index,1);
   }
 
   async savePic(){
@@ -32,14 +46,18 @@ export class Wall {
       if(response.error){
         alert("There was an error creating the Pic");
       } else {
-        //Could provide feeback                 
+        var picId = response._id;
+        if(this.filesToUpload && this.filesToUpload.length){
+          await this.pics.uploadFile(this.filesToUpload, this.user._id, picId);
+          this.filesToUpload = [];
+        }
       }
       this.showList = true;
     }
   }
 
   async activate(){
-    await  true //this.pics.getUserTodos(this.user._id);
+    await  this.pics.getUserPics(this.user._id);
   }
 
 

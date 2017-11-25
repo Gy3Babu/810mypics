@@ -13,19 +13,11 @@
       </div>
     </div>
   </div>
-  <div show.bind="pics.picsArray.length">
-    <table class="table">
-        <thead>
-          <tr>
-            <th>ToDo</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr repeat.for = "pic of pics.picsArray">
-            <th>${pics.pic}</th>
-          </tr>
-        </tbody>
-      </table>
+  <div class="row" show.bind="pics.picsArray.length">
+    <div class="col-3" repeat.for = "pic of pics.picsArray">
+      <img src="http://localhost:5000/uploads/${user._id}/${pic.file.filename}" class="img-fluid">
+      <strong>${pic.name}</strong>
+    </tr>
   </div>
   <div show.bind="!pics.picsArray.length">
     <h2>Apparently, you don't have Pics on your gallery!</h2>

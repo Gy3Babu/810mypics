@@ -3,7 +3,8 @@ var Schema = Mongoose.Schema;
 
 var PicSchema = new Schema({
     userID:{type: Schema.Types.ObjectId, required:true },
-    file:{fileName: String, originalName: String}
+    name:{type: String},
+    file:{filename: String, originalName: String, dateUploaded: Date}
 });
 
 module.exports = Mongoose.model('pics', PicSchema);
