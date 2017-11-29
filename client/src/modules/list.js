@@ -10,26 +10,47 @@ export class Wall {
   	this.router = router;
     this.auth = auth;
     this.user = JSON.parse(sessionStorage.getItem('user'));
-    this.message = "List"
-    this.showList = true;
+    this.message = this.user.firstName+"'s Pics";
+    this.modalTitle = '';
+    this.selected = [];
   }
-
-  back(){
-   this.showList = true; 
-  }
-
 
   logout(){
     sessionStorage.removeItem('user');
     this.auth.logout();
   }
 
+  selectAction(id,event){
+    var index = this.selected.indexOf(id);
+    if (index >= 0) {
+      this.selected.splice(index,1);
+    } else {
+      this.selected.push(id);
+    }
+
+    if($(event.target).hasClass('pic-container')){
+      $(event.target).toggleClass('active');
+    } else {
+      $(event.target).parent().toggleClass('active');
+    }
+  }
+
+
   createPic(){	
     this.picObj = {
       name: "",
       userID: this.user._id,
     }
-  	this.showList = false;		
+    this.modalTitle = 'New Pic';
+    $('#mainModal').modal();
+  }
+
+  deletePics(){
+
+    for(var i = 0, l = this.selected.length; i < l; i ++) {
+      this.pics.deletePic(this.selected[i]);
+    }
+    this.selected = [];
   }
 
   changeFiles(){
@@ -40,7 +61,7 @@ export class Wall {
     this.filesToUpload.splice(index,1);
   }
 
-  async savePic(){
+  async savePic(close){
     if(this.picObj){   
       let response = await this.pics.save(this.picObj);
       if(response.error){
@@ -48,11 +69,14 @@ export class Wall {
       } else {
         var picId = response._id;
         if(this.filesToUpload && this.filesToUpload.length){
+          console.log('adsd');
           await this.pics.uploadFile(this.filesToUpload, this.user._id, picId);
           this.filesToUpload = [];
         }
       }
-      this.showList = true;
+    }
+    if (close) {
+      $('#mainModal').modal('toggle');
     }
   }
 

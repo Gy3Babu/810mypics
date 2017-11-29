@@ -1,25 +1,31 @@
 <template>
-  <div class="card topMargin">
-    <div class="card-body">
-      <div class="row">
-        <span class="col">
-          <span class="rightMargin pull-right">
-            <i click.trigger="logout()"  class="fa fa-sign-out fa-lg" aria-hidden="true"></i>
-          </span>
-          <span class=" rightMargin pull-right">
-            <i click.trigger="createPic()"  class="fa fa-plus fa-lg" aria-hidden="true"></i>
-          </span>
-        </span>
-      </div>
+  <div class="row">
+    <div class="col-sm-3 border-right mimHeight">
+      <h3>Gallery List</h3>
     </div>
-  </div>
-  <div class="row" show.bind="pics.picsArray.length">
-    <div class="col-3" repeat.for = "pic of pics.picsArray">
-      <img src="http://localhost:5000/uploads/${user._id}/${pic.file.filename}" class="img-fluid">
-      <strong>${pic.name}</strong>
-    </tr>
-  </div>
-  <div show.bind="!pics.picsArray.length">
-    <h2>Apparently, you don't have Pics on your gallery!</h2>
+    <div class="col-sm-9 mimHeight">
+      <div class="card col-sm-12">
+         <div class="card-body text-right">
+            <a click.trigger="createPic()" class="btn btn-default rightMargin" href="#">
+              <i class="fa fa-plus"></i>
+            </a>
+            <a click.trigger="deletePics()" class="btn btn-default rightMargin" href="#">
+              <i class="fa fa-trash"></i>
+            </a>
+         </div>
+      </div>
+      <br><br>
+      <div class="row">
+        <div class="col-sm-3" repeat.for = "pic of pics.picsArray">
+          <div class="pic-container" click.trigger="selectAction(pic._id,$event)"  class.bind="(selected.indexOf(pic._id) < 0)? '' :  'active'">
+            <img src="http://localhost:5000/uploads/${user._id}/${pic.file.filename}" class="img-fluid">
+            <strong>${pic.name}</strong>
+          </div>
+        </tr>
+      </div>
+      <div show.bind="!pics.picsArray.length" class="col-sm-12">
+        <h2 class="text-center">Apparently, you don't have Pics on your gallery!</h2>
+      </div>        
+    </div>
   </div>
 </template>

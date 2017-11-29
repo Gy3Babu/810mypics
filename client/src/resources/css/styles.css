@@ -1,3 +1,45 @@
 .rightMargin {
-    margin-right: 10px;
+	margin-right: 10px;
+}
+
+.topMargin{
+	margin-top: 10px;
+}
+
+.btn,
+a{
+	cursor: pointer;
+}
+
+.btn.btn-default{
+	border:1px solid #000;
+	background: #000;
+	color:#fff;
+}
+
+.btn.btn-default:hover,
+.btn.btn-default:focus,
+.btn.btn-default:active{
+	color: #000;
+	background:#fff;
+}
+
+.border-right{
+	border-right: 1px solid #000;
+}
+
+
+.mimHeight{
+	min-height: 200px;
+}
+
+.pic-container{
+	cursor: pointer;
+	min-height: 180px;
+	margin-bottom: 20px;
+	border: 2px solid #000;
+}
+
+.pic-container.active{
+	border: 2px solid #0000DE;	
 }

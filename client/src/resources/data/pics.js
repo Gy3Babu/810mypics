@@ -9,6 +9,17 @@ export class Pics {
     this.picsArray = [];
   }
 
+
+  updateArray(pic){
+    for(var i = 0, l = this.picsArray.length; i < l; i++ ){
+      if (this.picsArray[i]._id == pic._id){
+        this.picsArray[i] = pic;
+        break;
+      }
+    }
+  }
+
+
   async save(pic){
     if(!pic._id){
       let response = await this.data.post(pic, this.PIC_SERVICE);
@@ -21,7 +32,7 @@ export class Pics {
       let response = await this.data.put(todo, this.TODOS_SERVICE + "/" + todo._id);
 
       if(!response.error){
-        // this.updateArray(response);
+        this.updateArray(response);
       }
       return response;      
     }         
@@ -40,6 +51,9 @@ export class Pics {
       formData.append("file" + index, item);
     });
     let response = await this.data.uploadFiles(formData, this.PIC_SERVICE +   "/upload/" + userId + "/" + picId);
+    if(!response.error){
+      this.updateArray(response);
+    }
     return response;
   }
 
