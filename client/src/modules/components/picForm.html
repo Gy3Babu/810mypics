@@ -1,30 +1,11 @@
 <template>
   <form>
     <div class="form-group topMargin">
-    <label for="todoInput">Pic Name *</label>
-      <input value.bind="picObj.name" type="text" class="form-control" id="todoInput" aria-describedby="todoHelp" placeholder="Enter Pic name">
-      <small id="todoHelp" class="form-text text-muted">A short name for the Pic.</small>
+      <label for="todoInput">Gallery Name *</label>
+      <input value.bind="picObj.name" type="text" class="form-control" id="todoInput" aria-describedby="todoHelp" placeholder="Enter Gallery name">
+      <small id="todoHelp" class="form-text text-muted">A short name for the Gallery.</small>
+      <button click.trigger="savePic(true)" class="btn btn-primary topMargin">Save</button>
     </div>
-    <div class="row">
-      <div class="col">
-        <label class="btn btn-secondary">
-            Browse for files&hellip; <input type="file" 
-            style="display: none;" 
-            change.delegate="changeFiles()" files.bind="files">
-        </label>
-        <small id="fileHelp" class="form-text text-muted">
-            Upload pic.</small>
-      </div>  
-      <div class="col-8">
-        <ul>
-          <li repeat.for="file of filesToUpload" class="list-group-item">
-            ${file.name}<span click.delegate="removeFile($index)" 
-            class="pull-right"><i class="fa fa-trash" aria-hidden="true">
-            </i></span></li>
-        </ul>
-      </div>
-    </div>
-    <button click.trigger="savePic(true)" class="btn btn-primary topMargin">Save</button>
   </form>
 </template>
 

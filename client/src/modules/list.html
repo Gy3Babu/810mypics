@@ -7,13 +7,49 @@
 			<div class="modal-dialog">
 				<div class="modal-content">
 					<div class="modal-header">
+						<h5 class="modal-title">${modalTitle}</h5>
+						<button type="button" class="close" data-dismiss="modal">
+							<i class="fa fa-close"></i>
+						</button>
+					</div>
+					<div class="modal-body">
+						<compose view="./components/picForm.html"></compose>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade" id="addPicture">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
 							<h5 class="modal-title">${modalTitle}</h5>
 							<button type="button" class="close" data-dismiss="modal">
 								<i class="fa fa-close"></i>
 							</button>
 					</div>
 					<div class="modal-body">
-						<compose view="./components/picForm.html"></compose>
+						<form>
+					    <div >
+					      <div>
+					        <label class="btn btn-secondary">
+					            Browse for files&hellip; <input type="file" 
+					            style="display: none;" 
+					            change.delegate="changeFiles()" files.bind="files">
+					        </label>
+					        <small id="fileHelp" class="form-text text-muted">
+					            Upload pic.</small>
+					      </div>  
+					      <div>
+					        <ul>
+					          <li repeat.for="file of filesToUpload" class="list-group-item">
+					            ${file.name}<span click.delegate="removeFile($index)" 
+					            class="pull-right"><i class="fa fa-trash" aria-hidden="true">
+					            </i></span></li>
+					        </ul>
+					      </div>
+								<button click.trigger="saveImages()" class="btn btn-primary topMargin">Save</button>
+					    </div>
+						</form>
 					</div>
 				</div>
 			</div>

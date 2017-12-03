@@ -6,6 +6,10 @@
 	margin-top: 10px;
 }
 
+ul{
+	padding: 0px;
+}
+
 .btn,
 a{
 	cursor: pointer;

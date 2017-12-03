@@ -1,27 +1,38 @@
 <template>
   <div class="row">
     <div class="col-sm-3 border-right mimHeight">
+      <a click.trigger="createPic()" class="btn btn-default btn-sm pull-right rightMargin" href="#">
+        <i class="fa fa-plus"></i>
+      </a>
       <h3>Gallery List</h3>
+      <ul class="list-group">
+        <li repeat.for = "pic of pics.picsArray" class="list-group-item list-group-item-action"  
+        class.bind="(gallerySelected._id == pic._id)? 'active':''" click.trigger="selectGallery(pic)">
+          <a>${pic.name}</a> 
+          <span class="pull-right rightMargin" click.trigger="deleteGallery(pic)"><i class="fa fa-trash"></i></span>
+          <span class="pull-right rightMargin" click.trigger="editPic(pic)"><i class="fa fa-pencil"></i></span> 
+        </li>
+      </ul>
     </div>
     <div class="col-sm-9 mimHeight">
       <div class="card col-sm-12">
          <div class="card-body text-right">
-            <a click.trigger="createPic()" class="btn btn-default rightMargin" href="#">
+            <a click.trigger="createImages()" class="btn btn-default btn-sm rightMargin" href="#">
               <i class="fa fa-plus"></i>
             </a>
-            <a click.trigger="deletePics()" class="btn btn-default rightMargin" href="#">
+            <a click.trigger="deleteImages()" class="btn btn-default btn-sm rightMargin" href="#">
               <i class="fa fa-trash"></i>
             </a>
          </div>
       </div>
       <br><br>
       <div class="row">
-        <div class="col-sm-3" repeat.for = "pic of pics.picsArray">
-          <div class="pic-container" click.trigger="selectAction(pic._id,$event)"  class.bind="(selected.indexOf(pic._id) < 0)? '' :  'active'">
-            <img src="http://localhost:5000/uploads/${user._id}/${pic.file.filename}" class="img-fluid">
-            <strong>${pic.name}</strong>
+        <div class="col-sm-3" repeat.for = "file of gallerySelected.files">
+            <div class="pic-container" click.trigger="selectAction(file.filename,$event)"  class.bind="(selected.indexOf(pic.filename) < 0)? '' :  'active'">
+            <img src="/uploads/${user._id}/${file.filename}" class="img-fluid">
+            <strong>${file.originalName}</strong>
           </div>
-        </tr>
+        </div>
       </div>
       <div show.bind="!pics.picsArray.length" class="col-sm-12">
         <h2 class="text-center">Apparently, you don't have Pics on your gallery!</h2>

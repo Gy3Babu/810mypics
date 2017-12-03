@@ -17,6 +17,7 @@ export class Pics {
         break;
       }
     }
+    this.picsArray.push(this.picsArray.pop())
   }
 
 
@@ -29,7 +30,7 @@ export class Pics {
       }
       return response;
      } else {
-      let response = await this.data.put(todo, this.TODOS_SERVICE + "/" + todo._id);
+      let response = await this.data.put(pic, this.PIC_SERVICE + "/" + pic._id);
 
       if(!response.error){
         this.updateArray(response);
@@ -54,6 +55,12 @@ export class Pics {
     if(!response.error){
       this.updateArray(response);
     }
+    return response;
+  }
+
+  async deleteImages(images,id){
+    let response = await this.data.post({'images':images},this.PIC_SERVICE + "/" + id+"/images");
+    this.updateArray(response);
     return response;
   }
 

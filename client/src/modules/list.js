@@ -12,6 +12,13 @@ export class Wall {
     this.user = JSON.parse(sessionStorage.getItem('user'));
     this.message = this.user.firstName+"'s Pics";
     this.modalTitle = '';
+    this.gallerySelected = false;
+    this.selected = [];
+    this.filesToUpload = [];
+  }
+
+  selectGallery(pic){
+    this.gallerySelected = pic;
     this.selected = [];
   }
 
@@ -35,6 +42,34 @@ export class Wall {
     }
   }
 
+  createImages(){
+
+    if (this.gallerySelected) {
+      this.picObj = this.gallerySelected
+      this.modalTitle = 'Add Image';
+      $('#addPicture').modal();
+    } else{
+      alert('Select a gallery');
+    }
+  }
+
+  deleteImages(){
+    for(var i = 0, l = this.selected.length; i < l; i ++) {
+      var reponse = this.pics.deleteImages(this.selected,this.gallerySelected._id);
+    }
+
+    this.selected = [];
+  }
+
+  async saveImages(){
+    if(this.filesToUpload && this.filesToUpload.length){
+      this.gallerySelected = await this.pics.uploadFile(this.filesToUpload, this.user._id, this.gallerySelected._id);
+      this.filesToUpload = [];
+    }
+    $('#addPicture').modal('toggle');
+    window.location.reload()
+  }
+
 
   createPic(){	
     this.picObj = {
@@ -45,12 +80,16 @@ export class Wall {
     $('#mainModal').modal();
   }
 
-  deletePics(){
 
-    for(var i = 0, l = this.selected.length; i < l; i ++) {
-      this.pics.deletePic(this.selected[i]);
-    }
-    this.selected = [];
+  editPic(pic){  
+    this.picObj = pic;
+    this.modalTitle = 'Edit Pic';
+    $('#mainModal').modal();
+  }
+
+  deleteGallery(pic){
+    this.pics.deletePic(pic._id);
+    this.gallerySelected = false;
   }
 
   changeFiles(){
@@ -68,22 +107,15 @@ export class Wall {
         alert("There was an error creating the Pic");
       } else {
         var picId = response._id;
-        if(this.filesToUpload && this.filesToUpload.length){
-          console.log('adsd');
-          await this.pics.uploadFile(this.filesToUpload, this.user._id, picId);
-          this.filesToUpload = [];
-        }
       }
-    }
-    if (close) {
-      $('#mainModal').modal('toggle');
+      if (close) {
+        $('#mainModal').modal('toggle');
+      }
     }
   }
 
   async activate(){
     await  this.pics.getUserPics(this.user._id);
   }
-
-
 
 }

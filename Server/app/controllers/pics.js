@@ -18,22 +18,23 @@ module.exports = function (app, config) {
       var path = config.uploads + req.params.userId + "/";
       mkdirp(path, function(err) {
       if(err){
-      res.status(500).json(err);
+        res.status(500).json(err);
       } else {
-      cb(null, path);
+        cb(null, path);
       }
     });
     },
     filename: function (req, file, cb) {
       let fileName = file.originalname.split('.');   
-      cb(null, fileName[0] + new Date().getTime() + "." +         fileName[fileName.length - 1]);
+      cb(null, fileName[0] + new Date().getTime() + "." + fileName[fileName.length - 1]);
     }
   });
 
 
   var upload = multer({ storage: storage });
 
-  router.post('/pics/upload/:userId/:picID', upload.any(), function(req, res, next){
+
+router.post('/pics/upload/:userId/:picID', upload.any(), function(req, res, next){
     logger.log('Upload file for Pic ' + req.params.picID + ' and ' + req.params.userId, 'verbose');
 
     Pics.findById(req.params.picID, function(err, pic){
@@ -41,11 +42,11 @@ module.exports = function (app, config) {
         return next(err);
       } else {     
         if(req.files){
-        pic.file = {
-          filename : req.files[0].filename,
-          originalName : req.files[0].originalname,
-          dateUploaded : new Date()
-        };
+          pic.files.push( {
+            filename : req.files[0].filename,
+            originalName : req.files[0].originalname,
+            dateUploaded : new Date()
+          });
         }
         pic.save()
         .then(pic => {
@@ -103,6 +104,19 @@ module.exports = function (app, config) {
     })
     .catch( err => {
       return next(err); 
+    });
+  });
+
+
+  router.post('/pics/:picID/images', function(req, res, next){
+
+    Pics.findById(req.params.picID, function(err,pic){
+      if(err){ 
+        return next(err);
+      } else { 
+        //clear images
+        
+      }
     });
   });
 
