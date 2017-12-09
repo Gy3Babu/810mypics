@@ -287,6 +287,8 @@ define('modules/list',['exports', 'aurelia-framework', 'aurelia-router', '../res
       this.gallerySelected = false;
       this.selected = [];
       this.filesToUpload = [];
+      this.fileDescription = '';
+      this.filename = '';
     }
 
     Wall.prototype.selectGallery = function selectGallery(pic) {
@@ -319,10 +321,18 @@ define('modules/list',['exports', 'aurelia-framework', 'aurelia-router', '../res
       if (this.gallerySelected) {
         this.picObj = this.gallerySelected;
         this.modalTitle = 'Add Image';
+        this.fileDescription = '';
         $('#addPicture').modal();
       } else {
         alert('Select a gallery');
       }
+    };
+
+    Wall.prototype.editImage = function editImage(image) {
+      this.fileDescription = image.description;
+      this.filename = image.filename;
+      this.modalTitle = 'Edit Image';
+      $('#addPicture').modal();
     };
 
     Wall.prototype.deleteImages = function deleteImages() {
@@ -331,6 +341,7 @@ define('modules/list',['exports', 'aurelia-framework', 'aurelia-router', '../res
       }
 
       this.selected = [];
+      window.location.reload();
     };
 
     Wall.prototype.saveImages = function () {
@@ -339,24 +350,22 @@ define('modules/list',['exports', 'aurelia-framework', 'aurelia-router', '../res
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
-                if (!(this.filesToUpload && this.filesToUpload.length)) {
-                  _context.next = 5;
+                if (!(this.filesToUpload && (this.filesToUpload.length || this.filename != ''))) {
+                  _context.next = 4;
                   break;
                 }
 
                 _context.next = 3;
-                return this.pics.uploadFile(this.filesToUpload, this.user._id, this.gallerySelected._id);
+                return this.pics.uploadFile(this.filesToUpload, this.fileDescription, this.filename, this.user._id, this.gallerySelected._id);
 
               case 3:
-                this.gallerySelected = _context.sent;
-
                 this.filesToUpload = [];
 
-              case 5:
+              case 4:
                 $('#addPicture').modal('toggle');
                 window.location.reload();
 
-              case 7:
+              case 6:
               case 'end':
                 return _context.stop();
             }
@@ -378,6 +387,7 @@ define('modules/list',['exports', 'aurelia-framework', 'aurelia-router', '../res
       };
       this.modalTitle = 'New Pic';
       $('#mainModal').modal();
+      this.filename = '';
     };
 
     Wall.prototype.editPic = function editPic(pic) {
@@ -641,15 +651,7 @@ define('resources/data/pics',['exports', 'aurelia-framework', './data-services']
       this.picsArray = [];
     }
 
-    Pics.prototype.updateArray = function updateArray(pic) {
-      for (var i = 0, l = this.picsArray.length; i < l; i++) {
-        if (this.picsArray[i]._id == pic._id) {
-          this.picsArray[i] = pic;
-          break;
-        }
-      }
-      this.picsArray.push(this.picsArray.pop());
-    };
+    Pics.prototype.updateArray = function updateArray(pic) {};
 
     Pics.prototype.save = function () {
       var _ref = _asyncToGenerator(regeneratorRuntime.mark(function _callee(pic) {
@@ -737,7 +739,7 @@ define('resources/data/pics',['exports', 'aurelia-framework', './data-services']
     }();
 
     Pics.prototype.uploadFile = function () {
-      var _ref3 = _asyncToGenerator(regeneratorRuntime.mark(function _callee3(files, userId, picId) {
+      var _ref3 = _asyncToGenerator(regeneratorRuntime.mark(function _callee3(files, description, filename, userId, picId) {
         var formData, response;
         return regeneratorRuntime.wrap(function _callee3$(_context3) {
           while (1) {
@@ -745,14 +747,16 @@ define('resources/data/pics',['exports', 'aurelia-framework', './data-services']
               case 0:
                 formData = new FormData();
 
+                formData.append('filename', filename);
+                formData.append('description', description);
 
                 files.forEach(function (item, index) {
                   formData.append("file" + index, item);
                 });
-                _context3.next = 4;
+                _context3.next = 6;
                 return this.data.uploadFiles(formData, this.PIC_SERVICE + "/upload/" + userId + "/" + picId);
 
-              case 4:
+              case 6:
                 response = _context3.sent;
 
                 if (!response.error) {
@@ -760,7 +764,7 @@ define('resources/data/pics',['exports', 'aurelia-framework', './data-services']
                 }
                 return _context3.abrupt('return', response);
 
-              case 7:
+              case 9:
               case 'end':
                 return _context3.stop();
             }
@@ -768,7 +772,7 @@ define('resources/data/pics',['exports', 'aurelia-framework', './data-services']
         }, _callee3, this);
       }));
 
-      function uploadFile(_x3, _x4, _x5) {
+      function uploadFile(_x3, _x4, _x5, _x6, _x7) {
         return _ref3.apply(this, arguments);
       }
 
@@ -799,7 +803,7 @@ define('resources/data/pics',['exports', 'aurelia-framework', './data-services']
         }, _callee4, this);
       }));
 
-      function deleteImages(_x6, _x7) {
+      function deleteImages(_x8, _x9) {
         return _ref4.apply(this, arguments);
       }
 
@@ -835,7 +839,7 @@ define('resources/data/pics',['exports', 'aurelia-framework', './data-services']
         }, _callee5, this);
       }));
 
-      function deletePic(_x8) {
+      function deletePic(_x10) {
         return _ref5.apply(this, arguments);
       }
 
@@ -936,11 +940,11 @@ define('resources/data/users',['exports', 'aurelia-framework', './data-services'
   }()) || _class);
 });
 define('text!app.html', ['module'], function(module) { module.exports = "<template><require from=\"./resources/css/styles.css\"></require><div class=\"container\"><router-view></router-view></div></template>"; });
-define('text!resources/css/styles.css', ['module'], function(module) { module.exports = ".rightMargin {\n\tmargin-right: 10px;\n}\n\n.topMargin{\n\tmargin-top: 10px;\n}\n\nul{\n\tpadding: 0px;\n}\n\n.btn,\na{\n\tcursor: pointer;\n}\n\n.btn.btn-default{\n\tborder:1px solid #000;\n\tbackground: #000;\n\tcolor:#fff;\n}\n\n.btn.btn-default:hover,\n.btn.btn-default:focus,\n.btn.btn-default:active{\n\tcolor: #000;\n\tbackground:#fff;\n}\n\n.border-right{\n\tborder-right: 1px solid #000;\n}\n\n\n.mimHeight{\n\tmin-height: 200px;\n}\n\n.pic-container{\n\tcursor: pointer;\n\tmin-height: 180px;\n\tmargin-bottom: 20px;\n\tborder: 2px solid #000;\n}\n\n.pic-container.active{\n\tborder: 2px solid #0000DE;\t\n}"; });
-define('text!modules/home.html', ['module'], function(module) { module.exports = "<template><h1 class=\"text-center topMargin\">${message}</h1><div class=\"col-sm-6 offset-sm-3\"><div class=\"jumbotron\"><compose show.bind=\"showLogin\" view=\"./components/login.html\"></compose><compose show.bind=\"!showLogin\" view=\"./components/register.html\"></compose></div></div></template>"; });
-define('text!modules/list.html', ['module'], function(module) { module.exports = "<template><div class=\"topMargin\"><button class=\"btn btn-default btn-sm pull-right\" click.trigger=\"logout()\">Sing Out</button><h1 class=\"text-center\">${message}</h1><compose view=\"./components/picList.html\"></compose><div class=\"modal fade\" id=\"mainModal\"><div class=\"modal-dialog\"><div class=\"modal-content\"><div class=\"modal-header\"><h5 class=\"modal-title\">${modalTitle}</h5><button type=\"button\" class=\"close\" data-dismiss=\"modal\"><i class=\"fa fa-close\"></i></button></div><div class=\"modal-body\"><compose view=\"./components/picForm.html\"></compose></div></div></div></div><div class=\"modal fade\" id=\"addPicture\"><div class=\"modal-dialog\"><div class=\"modal-content\"><div class=\"modal-header\"><h5 class=\"modal-title\">${modalTitle}</h5><button type=\"button\" class=\"close\" data-dismiss=\"modal\"><i class=\"fa fa-close\"></i></button></div><div class=\"modal-body\"><form><div><div><label class=\"btn btn-secondary\">Browse for files&hellip; <input type=\"file\" style=\"display:none\" change.delegate=\"changeFiles()\" files.bind=\"files\"></label><small id=\"fileHelp\" class=\"form-text text-muted\">Upload pic.</small></div><div><ul><li repeat.for=\"file of filesToUpload\" class=\"list-group-item\"> ${file.name}<span click.delegate=\"removeFile($index)\" class=\"pull-right\"><i class=\"fa fa-trash\" aria-hidden=\"true\"></i></span></li></ul></div><button click.trigger=\"saveImages()\" class=\"btn btn-primary topMargin\">Save</button></div></form></div></div></div></div></div></template>"; });
-define('text!modules/components/login.html', ['module'], function(module) { module.exports = "<template><div id=\"errorMsg\" class=\"alert alert-danger\" show.bind=\"loginError\" innerhtml.bind=\"loginError\"></div><div class=\"form-group\"><label for=\"email\">Email</label><input value.bind=\"email\" type=\"email\" autofocus class=\"form-control\" id=\"email\" placeholder=\"Email\"></div><div class=\"form-group\"><label for=\"password\">Password</label><input value.bind=\"password\" type=\"password\" class=\"form-control\" id=\"password\" placeholder=\"Password\"></div><div class=\"form-actions text-center\"><button click.trigger=\"login()\" class=\"btn btn-default\">Login</button><br><br><span>Don't have an account? <a click.trigger=\"showRegister()\" href=\"#\">Sign up</a> today!</span></div></template>"; });
+define('text!resources/css/styles.css', ['module'], function(module) { module.exports = "body{\n\tbackground: #E1ECF9;\n\tcolor: #000;\n}\n\n.btn,a{\n\tcursor: pointer;\n}\n\n.btn.btn-default{\n\tborder:1px solid #000;\n\tbackground: #000;\n\tcolor:#fff;\n}\n\n.btn.btn-default:hover,\n.btn.btn-default:focus,\n.btn.btn-default:active{\n\tcolor: #000;\n\tbackground:#fff;\n}\n\n\n.gallery-title{\n\tcolor: #133863;\n}\n\n.images-options{\n\tbackground: #091D34;\n}\n\n.images-options a.btn.btn-default{\n\tbackground: #236AB9;\n\tborder-color:#236AB9;\n}\n\n.images-options a.btn.btn-default:hover,\n.images-options a.btn.btn-default:focus,\n.images-options a.btn.btn-default:active{\n\tcolor: #236AB9;\n\tbackground:#fff;\n}\n\n\n.btn.btn-login{\n\tbackground:#133863;\n}\n\n.btn.btn-login:hover,\n.btn.btn-login:focus,\n.btn.btn-login:active{\n\tcolor: #133863;\n\tbackground:transparent;\n}\n\n\n.alert.alert-success{\n    background: #236AB9;\n    color: #E1ECF9;\n}\n\n.modal-content{\n\tbackground: #236AB9;\n\tcolor: #091D34;\n}\n\n\n.rightMargin {\n\tmargin-right: 10px;\n}\n\n.topMargin{\n\tmargin-top: 10px;\n}\n\nul{\n\tpadding: 0px;\n}\n\n\n.border-right{\n\tborder-right: 1px solid #000;\n}\n\n\n.mimHeight{\n\tmin-height: 200px;\n}\n\n.pic-container{\n\tcursor: pointer;\n\tmin-height: 180px;\n\tmargin-bottom: 20px;\n\tborder: 2px solid #000;\n}\n\n.pic-container.active{\n\tborder: 2px solid #0000DE;\t\n}"; });
+define('text!modules/home.html', ['module'], function(module) { module.exports = "<template><h1 class=\"text-center topMargin gallery-title\">${message}</h1><div class=\"col-sm-6 offset-sm-3\"><div class=\"jumbotron\"><compose show.bind=\"showLogin\" view=\"./components/login.html\"></compose><compose show.bind=\"!showLogin\" view=\"./components/register.html\"></compose></div></div></template>"; });
+define('text!modules/list.html', ['module'], function(module) { module.exports = "<template><div class=\"topMargin\"><button class=\"btn btn-default btn-sm pull-right\" click.trigger=\"logout()\">Sing Out</button><h1 class=\"gallery-title text-center\">${message}</h1><compose view=\"./components/picList.html\"></compose><div class=\"modal fade\" id=\"mainModal\"><div class=\"modal-dialog\"><div class=\"modal-content\"><div class=\"modal-header\"><h5 class=\"modal-title\">${modalTitle}</h5><button type=\"button\" class=\"close\" data-dismiss=\"modal\"><i class=\"fa fa-close\"></i></button></div><div class=\"modal-body\"><compose view=\"./components/picForm.html\"></compose></div></div></div></div><div class=\"modal fade\" id=\"addPicture\"><div class=\"modal-dialog\"><div class=\"modal-content\"><div class=\"modal-header\"><h5 class=\"modal-title\">${modalTitle}</h5><button type=\"button\" class=\"close\" data-dismiss=\"modal\"><i class=\"fa fa-close\"></i></button></div><div class=\"modal-body\"><form><div><div class=\"form-group\"><label>Descripción</label><input type=\"text\" name=\"description\" class=\"form-control\" value.bind=\"fileDescription\"></div><div><label class=\"btn btn-secondary\">Browse for files&hellip; <input type=\"file\" style=\"display:none\" change.delegate=\"changeFiles()\" files.bind=\"files\"></label><small id=\"fileHelp\" class=\"form-text text-muted\">Upload pic.</small></div><div><ul><li repeat.for=\"file of filesToUpload\" class=\"list-group-item\"> ${file.name}<span click.delegate=\"removeFile($index)\" class=\"pull-right\"><i class=\"fa fa-trash\" aria-hidden=\"true\"></i></span></li></ul></div><button click.trigger=\"saveImages()\" class=\"btn btn-primary topMargin\">Save</button></div></form></div></div></div></div></div></template>"; });
+define('text!modules/components/login.html', ['module'], function(module) { module.exports = "<template><div id=\"errorMsg\" class=\"alert alert-danger\" show.bind=\"loginError\" innerhtml.bind=\"loginError\"></div><div class=\"form-group\"><label for=\"email\">Email</label><input value.bind=\"email\" type=\"email\" autofocus class=\"form-control\" id=\"email\" placeholder=\"Email\"></div><div class=\"form-group\"><label for=\"password\">Password</label><input value.bind=\"password\" type=\"password\" class=\"form-control\" id=\"password\" placeholder=\"Password\"></div><div class=\"form-actions text-center\"><button click.trigger=\"login()\" class=\"btn btn-default btn-login\">Login</button><br><br><span>Don't have an account? <a click.trigger=\"showRegister()\" href=\"#\">Sign up</a> today!</span></div></template>"; });
 define('text!modules/components/picForm.html', ['module'], function(module) { module.exports = "<template><form><div class=\"form-group topMargin\"><label for=\"todoInput\">Gallery Name *</label><input value.bind=\"picObj.name\" type=\"text\" class=\"form-control\" id=\"todoInput\" aria-describedby=\"todoHelp\" placeholder=\"Enter Gallery name\"> <small id=\"todoHelp\" class=\"form-text text-muted\">A short name for the Gallery.</small> <button click.trigger=\"savePic(true)\" class=\"btn btn-primary topMargin\">Save</button></div></form></template>"; });
-define('text!modules/components/picList.html', ['module'], function(module) { module.exports = "<template><div class=\"row\"><div class=\"col-sm-3 border-right mimHeight\"><a click.trigger=\"createPic()\" class=\"btn btn-default btn-sm pull-right rightMargin\" href=\"#\"><i class=\"fa fa-plus\"></i></a><h3>Gallery List</h3><ul class=\"list-group\"><li repeat.for=\"pic of pics.picsArray\" class=\"list-group-item list-group-item-action\" class.bind=\"(gallerySelected._id == pic._id)? 'active':''\" click.trigger=\"selectGallery(pic)\"><a>${pic.name}</a><span class=\"pull-right rightMargin\" click.trigger=\"deleteGallery(pic)\"><i class=\"fa fa-trash\"></i></span> <span class=\"pull-right rightMargin\" click.trigger=\"editPic(pic)\"><i class=\"fa fa-pencil\"></i></span></li></ul></div><div class=\"col-sm-9 mimHeight\"><div class=\"card col-sm-12\"><div class=\"card-body text-right\"><a click.trigger=\"createImages()\" class=\"btn btn-default btn-sm rightMargin\" href=\"#\"><i class=\"fa fa-plus\"></i> </a><a click.trigger=\"deleteImages()\" class=\"btn btn-default btn-sm rightMargin\" href=\"#\"><i class=\"fa fa-trash\"></i></a></div></div><br><br><div class=\"row\"><div class=\"col-sm-3\" repeat.for=\"file of gallerySelected.files\"><div class=\"pic-container\" click.trigger=\"selectAction(file.filename,$event)\" class.bind=\"(selected.indexOf(pic.filename) < 0)? '' :  'active'\"><img src=\"/uploads/${user._id}/${file.filename}\" class=\"img-fluid\"> <strong>${file.originalName}</strong></div></div></div><div show.bind=\"!pics.picsArray.length\" class=\"col-sm-12\"><h2 class=\"text-center\">Apparently, you don't have Pics on your gallery!</h2></div></div></div></template>"; });
+define('text!modules/components/picList.html', ['module'], function(module) { module.exports = "<template><div class=\"row\"><div class=\"col-sm-3 border-right mimHeight\"><a click.trigger=\"createPic()\" class=\"btn btn-default btn-sm pull-right rightMargin\" href=\"#\"><i class=\"fa fa-plus\"></i></a><h3>Gallery List</h3><ul class=\"list-group\"><li repeat.for=\"pic of pics.picsArray\" class=\"list-group-item list-group-item-action\" class.bind=\"(gallerySelected._id == pic._id)? 'active':''\" click.trigger=\"selectGallery(pic)\"><a>${pic.name}</a><span class=\"pull-right rightMargin\" click.trigger=\"deleteGallery(pic)\"><i class=\"fa fa-trash\"></i></span> <span class=\"pull-right rightMargin\" click.trigger=\"editPic(pic)\"><i class=\"fa fa-pencil\"></i></span></li></ul></div><div class=\"col-sm-9 mimHeight\"><div class=\"card col-sm-12 images-options\"><div class=\"card-body text-right\"><a click.trigger=\"createImages()\" class=\"btn btn-default btn-sm rightMargin\" href=\"#\"><i class=\"fa fa-plus\"></i> </a><a click.trigger=\"deleteImages()\" class=\"btn btn-default btn-sm rightMargin\" href=\"#\"><i class=\"fa fa-trash\"></i></a></div></div><br><br><div class=\"row\"><div class=\"col-sm-3 text-center\" repeat.for=\"file of gallerySelected.files\"><div class=\"pic-container\" click.trigger=\"selectAction(file.filename,$event)\" class.bind=\"(selected.indexOf(pic.filename) < 0)? '' :  'active'\"><img src=\"/uploads/${user._id}/${file.filename}\" class=\"img-fluid\"> <strong>${file.description}</strong><a click.trigger=\"editImage(file)\" class=\"btn btn-default btn-sm\" href=\"#\"><i class=\"fa fa-pencil\"></i></a></div></div></div><div show.bind=\"!pics.picsArray.length\" class=\"col-sm-12\"><h2 class=\"text-center\">Apparently, you don't have Pics on your gallery!</h2></div></div></div></template>"; });
 define('text!modules/components/register.html', ['module'], function(module) { module.exports = "<template><div class=\"alert alert-success text-center\" show.bind=\"showOK\">\"Registration was successful\"<br><a click.trigger=\"showLogin = true\" href=\"#\">Please Login</a></div><form><div class=\"form-group\"><label>First Name:</label><input value.bind=\"user.firstName\" class=\"form-control\" required=\"\"></div><div class=\"form-group\"><label>Last Name:</label><input value.bind=\"user.lastName\" class=\"form-control\" required=\"\"></div><div class=\"form-group\"><label>Email:</label><input value.bind=\"user.email\" class=\"form-control\" required=\"\"></div><div class=\"form-group\"><label>Password:</label><input value.bind=\"user.password\" class=\"form-control\" required=\"\"></div><div class=\"form-actions\"><button class=\"btn btn-default\" click.trigger=\"save()\">Save</button></div></form></template>"; });
 //# sourceMappingURL=app-bundle.js.map

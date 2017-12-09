@@ -5933,7 +5933,14 @@ var requirejs, require, define;
 }(this, (typeof setTimeout === 'undefined' ? undefined : setTimeout)));
 
 _aureliaConfigureModuleLoader();
-define('regenerator-runtime/runtime-module',['require','exports','module','./runtime'],function (require, exports, module) {// This method of obtaining a reference to the global object needs to be
+define('regenerator-runtime/runtime-module',['require','exports','module','./runtime'],function (require, exports, module) {/**
+ * Copyright (c) 2014-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+// This method of obtaining a reference to the global object needs to be
 // kept identical to the way it is obtained in runtime.js
 var g = (function() { return this })() || Function("return this")();
 
@@ -5967,13 +5974,10 @@ if (hadRuntime) {
 ;define('regenerator-runtime', ['regenerator-runtime/runtime-module'], function (main) { return main; });
 
 define('regenerator-runtime/runtime',['require','exports','module'],function (require, exports, module) {/**
- * Copyright (c) 2014, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2014-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * https://raw.github.com/facebook/regenerator/master/LICENSE file. An
- * additional grant of patent rights can be found in the PATENTS file in
- * the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  */
 
 !(function(global) {
@@ -9427,7 +9431,7 @@ define('aurelia-binding',['exports', 'aurelia-logging', 'aurelia-pal', 'aurelia-
 
     Scanner.prototype.scanOperator = function scanOperator(start, text) {
       assert(this.peek === text.charCodeAt(0));
-      assert(OPERATORS.indexOf(text) !== -1);
+      assert(OPERATORS[text] === 1);
       this.advance();
       return new Token(start, text).withOp(text);
     };
@@ -9448,7 +9452,7 @@ define('aurelia-binding',['exports', 'aurelia-logging', 'aurelia-pal', 'aurelia-
         text += two;
       }
 
-      assert(OPERATORS.indexOf(text) !== -1);
+      assert(OPERATORS[text] === 1);
 
       return new Token(start, text).withOp(text);
     };
@@ -9466,7 +9470,7 @@ define('aurelia-binding',['exports', 'aurelia-logging', 'aurelia-pal', 'aurelia-
       var text = this.input.substring(start, this.index);
       var result = new Token(start, text);
 
-      if (OPERATORS.indexOf(text) !== -1) {
+      if (OPERATORS[text] === 1) {
         result.withOp(text);
       } else {
         result.withGetterSetter(text);
@@ -9589,7 +9593,33 @@ define('aurelia-binding',['exports', 'aurelia-logging', 'aurelia-pal', 'aurelia-
     return Scanner;
   }();
 
-  var OPERATORS = ['undefined', 'null', 'true', 'false', '+', '-', '*', '/', '%', '^', '=', '==', '===', '!=', '!==', '<', '>', '<=', '>=', '&&', '||', '&', '|', '!', '?'];
+  var OPERATORS = {
+    'undefined': 1,
+    'null': 1,
+    'true': 1,
+    'false': 1,
+    '+': 1,
+    '-': 1,
+    '*': 1,
+    '/': 1,
+    '%': 1,
+    '^': 1,
+    '=': 1,
+    '==': 1,
+    '===': 1,
+    '!=': 1,
+    '!==': 1,
+    '<': 1,
+    '>': 1,
+    '<=': 1,
+    '>=': 1,
+    '&&': 1,
+    '||': 1,
+    '&': 1,
+    '|': 1,
+    '!': 1,
+    '?': 1
+  };
 
   var $EOF = 0;
   var $TAB = 9;
@@ -11930,7 +11960,9 @@ define('aurelia-binding',['exports', 'aurelia-logging', 'aurelia-pal', 'aurelia-
         this.updateTarget(value);
       }
 
-      if (mode === bindingMode.toView) {
+      if (mode === bindingMode.oneTime) {
+        return;
+      } else if (mode === bindingMode.toView) {
         enqueueBindingConnect(this);
       } else if (mode === bindingMode.twoWay) {
         this.sourceExpression.connect(this, source);

@@ -41,12 +41,34 @@ router.post('/pics/upload/:userId/:picID', upload.any(), function(req, res, next
       if(err){ 
         return next(err);
       } else {     
-        if(req.files){
-          pic.files.push( {
+        if(req.files && req.files.length){
+
+          var file = {
+            description : req.body.description,
             filename : req.files[0].filename,
             originalName : req.files[0].originalname,
             dateUploaded : new Date()
-          });
+          };
+
+          if (req.body.filename && req.body.filename != ''){
+            for(var x = 0, z = pic.files.length; x < z; x++) {
+              if (pic.files[x].filename == req.body.filename){
+                pic.files[x] = file;
+                break;
+              }
+            }
+          } else {
+            pic.files.push(file);
+          }
+        } else {
+          if (req.body.filename && req.body.filename != ''){
+            for(var x = 0, z = pic.files.length; x < z; x++) {
+              if (pic.files[x].filename == req.body.filename){
+                pic.files[x].description = req.body.description;
+                break;
+              }
+            }
+          }
         }
         pic.save()
         .then(pic => {
@@ -114,8 +136,16 @@ router.post('/pics/upload/:userId/:picID', upload.any(), function(req, res, next
       if(err){ 
         return next(err);
       } else { 
-        //clear images
-        
+        for(var i = 0, l = req.body.images.length; i < l; i++ ){
+          for(var x = 0, z = pic.files.length; x < z; x++) {
+            if (pic.files[x].filename == req.body.images[i]){
+              pic.files.splice(x,1);
+              break;
+            }
+          }
+        }
+        pic.save()
+        res.status(200).json(pic);
       }
     });
   });

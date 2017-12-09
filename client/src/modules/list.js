@@ -15,6 +15,8 @@ export class Wall {
     this.gallerySelected = false;
     this.selected = [];
     this.filesToUpload = [];
+    this.fileDescription = '';
+    this.filename = '';
   }
 
   selectGallery(pic){
@@ -47,10 +49,18 @@ export class Wall {
     if (this.gallerySelected) {
       this.picObj = this.gallerySelected
       this.modalTitle = 'Add Image';
+      this.fileDescription = '';
       $('#addPicture').modal();
     } else{
       alert('Select a gallery');
     }
+  }
+
+  editImage(image){
+    this.fileDescription = image.description;
+    this.filename = image.filename;
+    this.modalTitle = 'Edit Image';
+    $('#addPicture').modal();
   }
 
   deleteImages(){
@@ -59,11 +69,12 @@ export class Wall {
     }
 
     this.selected = [];
+    window.location.reload()
   }
 
   async saveImages(){
-    if(this.filesToUpload && this.filesToUpload.length){
-      this.gallerySelected = await this.pics.uploadFile(this.filesToUpload, this.user._id, this.gallerySelected._id);
+    if(this.filesToUpload && (this.filesToUpload.length || this.filename != '')){
+      await this.pics.uploadFile(this.filesToUpload, this.fileDescription, this.filename, this.user._id, this.gallerySelected._id);
       this.filesToUpload = [];
     }
     $('#addPicture').modal('toggle');
@@ -78,6 +89,7 @@ export class Wall {
     }
     this.modalTitle = 'New Pic';
     $('#mainModal').modal();
+    this.filename = '';
   }
 
 

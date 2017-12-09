@@ -1,0 +1,491 @@
+{"level":"info","message":"Loading Mongoose functionality","timestamp":"2017-12-09T14:58:06.196Z"}
+{"level":"info","message":"Starting application","timestamp":"2017-12-09T14:58:06.355Z"}
+{"level":"info","message":"Creating HTTP server on port: 5000","timestamp":"2017-12-09T14:58:06.355Z"}
+{"level":"info","message":"Mongoose connected to the database","timestamp":"2017-12-09T14:58:06.374Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T16:00:37.627Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T16:01:19.417Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T16:01:19.595Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T16:01:19.596Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T16:01:56.663Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T16:01:56.664Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T16:01:57.354Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T16:01:57.356Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T16:01:58.029Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:33:47.670Z"}
+{"level":"verbose","message":"Delete Pic with id PicID + req.params.PicID","timestamp":"2017-12-09T18:33:47.670Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:33:48.236Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:33:48.242Z"}
+{"level":"verbose","message":"Delete Pic with id PicID + req.params.PicID","timestamp":"2017-12-09T18:33:48.242Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:33:50.441Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T18:33:50.441Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:34:39.823Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T18:34:39.823Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:35:02.646Z"}
+{"level":"verbose","message":"Create a Pic","timestamp":"2017-12-09T18:35:02.647Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:36:23.442Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T18:36:23.442Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:36:38.761Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T18:36:38.761Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:37:08.768Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T18:37:08.768Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:37:32.368Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T18:37:32.368Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:37:32.857Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T18:37:32.857Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:37:52.356Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T18:37:52.356Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:37:58.525Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T18:37:58.526Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:38:05.619Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T18:38:05.619Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:38:07.225Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T18:38:07.225Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:38:18.584Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T18:38:18.584Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:38:19.810Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T18:38:19.810Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:40:50.902Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T18:40:50.902Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:41:10.945Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T18:41:10.945Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:41:17.524Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T18:41:17.524Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:41:49.465Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T18:41:49.466Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:41:59.676Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T18:41:59.677Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:42:25.130Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T18:42:25.130Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:44:20.928Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T18:44:20.928Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:44:35.463Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T18:44:35.463Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:44:40.911Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T18:44:40.912Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:44:57.630Z"}
+{"level":"verbose","message":"Upload file for Pic 5a2c2cd6c93960107532ef23 and 5a1937425a09da6f0663fb7c","timestamp":"2017-12-09T18:44:57.641Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:44:58.752Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T18:44:58.752Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:45:00.045Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:45:23.323Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T18:45:23.323Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:45:24.882Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:45:36.914Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T18:45:36.914Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:45:39.032Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T18:45:39.032Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:45:39.861Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:45:55.364Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T18:45:55.364Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:46:14.072Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T18:46:14.072Z"}
+{"level":"info","message":"Loading Mongoose functionality","timestamp":"2017-12-09T18:46:25.944Z"}
+{"level":"info","message":"Starting application","timestamp":"2017-12-09T18:46:26.060Z"}
+{"level":"info","message":"Creating HTTP server on port: 5000","timestamp":"2017-12-09T18:46:26.060Z"}
+{"level":"info","message":"Mongoose connected to the database","timestamp":"2017-12-09T18:46:26.072Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:46:27.882Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T18:46:27.883Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:46:28.477Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:47:03.898Z"}
+{"level":"verbose","message":"Upload file for Pic 5a2c2cd6c93960107532ef23 and 5a1937425a09da6f0663fb7c","timestamp":"2017-12-09T18:47:03.910Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:47:04.771Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T18:47:04.772Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:47:06.410Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:47:20.639Z"}
+{"level":"verbose","message":"Upload file for Pic 5a2c2cd6c93960107532ef23 and 5a1937425a09da6f0663fb7c","timestamp":"2017-12-09T18:47:20.641Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:47:21.597Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T18:47:21.597Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:47:23.136Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:47:54.534Z"}
+{"level":"verbose","message":"Upload file for Pic 5a2c2cd6c93960107532ef23 and 5a1937425a09da6f0663fb7c","timestamp":"2017-12-09T18:47:54.537Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:47:55.620Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T18:47:55.620Z"}
+{"level":"info","message":"Loading Mongoose functionality","timestamp":"2017-12-09T18:48:16.560Z"}
+{"level":"info","message":"Starting application","timestamp":"2017-12-09T18:48:16.702Z"}
+{"level":"info","message":"Creating HTTP server on port: 5000","timestamp":"2017-12-09T18:48:16.703Z"}
+{"level":"info","message":"Mongoose connected to the database","timestamp":"2017-12-09T18:48:16.719Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:48:36.162Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:48:36.325Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T18:48:36.326Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:49:08.726Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:49:16.592Z"}
+{"level":"verbose","message":"Upload file for Pic 5a2c2cd6c93960107532ef23 and 5a1937425a09da6f0663fb7c","timestamp":"2017-12-09T18:49:16.602Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:50:02.696Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T18:50:02.696Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:50:03.915Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:50:12.828Z"}
+{"level":"verbose","message":"Upload file for Pic 5a2c2cd6c93960107532ef23 and 5a1937425a09da6f0663fb7c","timestamp":"2017-12-09T18:50:12.830Z"}
+{"level":"info","message":"Loading Mongoose functionality","timestamp":"2017-12-09T18:50:24.166Z"}
+{"level":"info","message":"Starting application","timestamp":"2017-12-09T18:50:24.301Z"}
+{"level":"info","message":"Creating HTTP server on port: 5000","timestamp":"2017-12-09T18:50:24.301Z"}
+{"level":"info","message":"Mongoose connected to the database","timestamp":"2017-12-09T18:50:24.312Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:50:28.675Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T18:50:28.676Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:50:29.270Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:50:38.510Z"}
+{"level":"verbose","message":"Upload file for Pic 5a2c2cd6c93960107532ef23 and 5a1937425a09da6f0663fb7c","timestamp":"2017-12-09T18:50:38.522Z"}
+{"level":"info","message":"Loading Mongoose functionality","timestamp":"2017-12-09T18:51:00.416Z"}
+{"level":"info","message":"Starting application","timestamp":"2017-12-09T18:51:00.500Z"}
+{"level":"info","message":"Creating HTTP server on port: 5000","timestamp":"2017-12-09T18:51:00.500Z"}
+{"level":"info","message":"Mongoose connected to the database","timestamp":"2017-12-09T18:51:00.518Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:51:18.387Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T18:51:18.388Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:51:19.340Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:51:27.189Z"}
+{"level":"verbose","message":"Upload file for Pic 5a2c2cd6c93960107532ef23 and 5a1937425a09da6f0663fb7c","timestamp":"2017-12-09T18:51:27.200Z"}
+{"level":"info","message":"Loading Mongoose functionality","timestamp":"2017-12-09T18:51:57.382Z"}
+{"level":"info","message":"Starting application","timestamp":"2017-12-09T18:51:57.472Z"}
+{"level":"info","message":"Creating HTTP server on port: 5000","timestamp":"2017-12-09T18:51:57.472Z"}
+{"level":"info","message":"Mongoose connected to the database","timestamp":"2017-12-09T18:51:57.492Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:52:00.121Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T18:52:00.122Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:52:03.146Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:52:10.611Z"}
+{"level":"verbose","message":"Upload file for Pic 5a2c2cd6c93960107532ef23 and 5a1937425a09da6f0663fb7c","timestamp":"2017-12-09T18:52:10.623Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:52:16.010Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T18:52:16.010Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:52:17.215Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:52:17.216Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:52:25.279Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T18:52:25.279Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:52:27.742Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:52:27.743Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:52:29.680Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T18:52:29.680Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:52:31.027Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:52:31.027Z"}
+{"level":"info","message":"Loading Mongoose functionality","timestamp":"2017-12-09T18:53:16.601Z"}
+{"level":"info","message":"Starting application","timestamp":"2017-12-09T18:53:16.725Z"}
+{"level":"info","message":"Creating HTTP server on port: 5000","timestamp":"2017-12-09T18:53:16.726Z"}
+{"level":"info","message":"Mongoose connected to the database","timestamp":"2017-12-09T18:53:16.745Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:53:18.969Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T18:53:18.970Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:53:19.746Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:53:19.749Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:53:25.990Z"}
+{"level":"verbose","message":"Upload file for Pic 5a2c2cd6c93960107532ef23 and 5a1937425a09da6f0663fb7c","timestamp":"2017-12-09T18:53:26.003Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:53:28.235Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T18:53:28.235Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:53:28.900Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:53:28.901Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:53:28.902Z"}
+{"level":"info","message":"Loading Mongoose functionality","timestamp":"2017-12-09T18:53:58.199Z"}
+{"level":"info","message":"Starting application","timestamp":"2017-12-09T18:53:58.281Z"}
+{"level":"info","message":"Creating HTTP server on port: 5000","timestamp":"2017-12-09T18:53:58.281Z"}
+{"level":"info","message":"Mongoose connected to the database","timestamp":"2017-12-09T18:53:58.299Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:54:01.466Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T18:54:01.468Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:54:02.274Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:54:02.276Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:54:02.276Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:54:03.450Z"}
+{"level":"verbose","message":"Delete Pic with id PicID + req.params.PicID","timestamp":"2017-12-09T18:54:03.451Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:54:05.209Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T18:54:05.210Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:54:15.320Z"}
+{"level":"verbose","message":"Create a Pic","timestamp":"2017-12-09T18:54:15.337Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:54:23.972Z"}
+{"level":"verbose","message":"Upload file for Pic 5a2c31573a80df1132ff795a and 5a1937425a09da6f0663fb7c","timestamp":"2017-12-09T18:54:23.984Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:55:22.845Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T18:55:22.845Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:55:23.661Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:55:32.734Z"}
+{"level":"verbose","message":"Upload file for Pic 5a2c31573a80df1132ff795a and 5a1937425a09da6f0663fb7c","timestamp":"2017-12-09T18:55:32.737Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:55:34.594Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T18:55:34.595Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:55:35.365Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:55:35.366Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:55:58.271Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T18:55:58.271Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:55:59.586Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:55:59.587Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:56:10.623Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T18:56:10.623Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:56:15.717Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T18:56:15.717Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:56:17.383Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:56:17.383Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:56:34.187Z"}
+{"level":"verbose","message":"Upload file for Pic 5a2c31573a80df1132ff795a and 5a1937425a09da6f0663fb7c","timestamp":"2017-12-09T18:56:34.190Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:56:47.574Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T18:56:47.575Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:57:40.411Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T18:57:40.411Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:57:41.530Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:57:41.530Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:57:41.531Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:57:46.905Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T18:57:46.905Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:57:47.849Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:57:47.850Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:57:47.851Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:57:57.604Z"}
+{"level":"verbose","message":"Upload file for Pic 5a2c31573a80df1132ff795a and 5a1937425a09da6f0663fb7c","timestamp":"2017-12-09T18:57:57.605Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:58:01.490Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T18:58:01.491Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:58:02.404Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:58:02.404Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:58:02.405Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:58:02.406Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:58:48.724Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T18:58:48.727Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:00:09.619Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T19:00:09.619Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:00:11.167Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:00:11.168Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:00:11.168Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:00:11.169Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:00:13.439Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:00:13.440Z"}
+{"level":"info","message":"Loading Mongoose functionality","timestamp":"2017-12-09T19:00:19.875Z"}
+{"level":"info","message":"Starting application","timestamp":"2017-12-09T19:00:20.011Z"}
+{"level":"info","message":"Creating HTTP server on port: 5000","timestamp":"2017-12-09T19:00:20.011Z"}
+{"level":"info","message":"Mongoose connected to the database","timestamp":"2017-12-09T19:00:20.023Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:00:22.685Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T19:00:22.686Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:00:23.852Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:00:23.854Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:00:23.855Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:00:23.855Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:00:29.361Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:00:29.380Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:00:29.382Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:02:29.383Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:02:29.384Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:02:29.409Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:03:10.637Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T19:03:10.638Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:03:11.275Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:03:11.275Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:03:11.276Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:03:11.277Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:03:14.965Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:03:14.967Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:03:14.968Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:03:24.114Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T19:03:24.115Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:03:24.658Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:03:24.659Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:03:24.660Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:03:24.660Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:03:34.619Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T19:03:34.619Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:03:35.458Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:03:35.459Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:03:35.459Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:03:35.460Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:03:39.305Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:03:39.306Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:03:39.308Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:03:41.307Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T19:03:41.307Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:03:41.819Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:03:41.820Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:03:41.820Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:03:41.821Z"}
+{"level":"info","message":"Loading Mongoose functionality","timestamp":"2017-12-09T19:06:09.564Z"}
+{"level":"info","message":"Starting application","timestamp":"2017-12-09T19:06:09.698Z"}
+{"level":"info","message":"Creating HTTP server on port: 5000","timestamp":"2017-12-09T19:06:09.698Z"}
+{"level":"info","message":"Mongoose connected to the database","timestamp":"2017-12-09T19:06:09.714Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:06:13.757Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T19:06:13.758Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:06:14.662Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:06:14.663Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:06:14.664Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:06:14.664Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:06:17.665Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:06:17.683Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:06:17.686Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:06:19.568Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T19:06:19.569Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:06:20.116Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:07:02.039Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T19:07:02.039Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:07:11.126Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T19:07:11.126Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:07:11.851Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:07:17.739Z"}
+{"level":"verbose","message":"Upload file for Pic 5a2c31573a80df1132ff795a and 5a1937425a09da6f0663fb7c","timestamp":"2017-12-09T19:07:17.748Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:07:18.196Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T19:07:18.196Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:07:19.125Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:07:19.127Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:07:21.921Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:07:22.327Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T19:07:22.327Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:07:23.145Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:13:10.056Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T19:13:10.056Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:13:12.645Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T19:13:12.645Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:13:16.975Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T19:13:16.975Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:14:09.030Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T19:14:09.030Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:14:47.243Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T19:14:47.243Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:15:29.579Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T19:15:29.579Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:15:42.708Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T19:15:42.708Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:16:00.220Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T19:16:00.221Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:16:02.558Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:16:20.008Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T19:16:20.009Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:16:21.867Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:16:44.425Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T19:16:44.425Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:17:04.147Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T19:17:04.148Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:17:12.171Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T19:17:12.171Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:17:30.048Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T19:17:30.048Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:17:35.301Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T19:17:35.301Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:17:44.893Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T19:17:44.893Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:17:59.774Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T19:17:59.775Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:18:01.555Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T19:18:01.556Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:18:02.693Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:18:39.722Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T19:18:39.722Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:18:48.646Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T19:18:48.646Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:19:06.277Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T19:19:06.277Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:19:08.849Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T19:19:08.849Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:22:15.945Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T19:22:15.945Z"}
+{"level":"info","message":"Loading Mongoose functionality","timestamp":"2017-12-09T19:22:19.575Z"}
+{"level":"info","message":"Starting application","timestamp":"2017-12-09T19:22:19.704Z"}
+{"level":"info","message":"Creating HTTP server on port: 5000","timestamp":"2017-12-09T19:22:19.704Z"}
+{"level":"info","message":"Mongoose connected to the database","timestamp":"2017-12-09T19:22:19.715Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:22:21.824Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T19:22:21.825Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:22:22.528Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:22:28.467Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T19:22:28.467Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:22:29.188Z"}
+{"level":"info","message":"Loading Mongoose functionality","timestamp":"2017-12-09T19:23:03.790Z"}
+{"level":"info","message":"Starting application","timestamp":"2017-12-09T19:23:03.890Z"}
+{"level":"info","message":"Creating HTTP server on port: 5000","timestamp":"2017-12-09T19:23:03.890Z"}
+{"level":"info","message":"Mongoose connected to the database","timestamp":"2017-12-09T19:23:03.909Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:23:18.350Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T19:23:18.352Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:23:26.382Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T19:23:26.383Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:23:28.023Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:25:08.779Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T19:25:08.779Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:25:11.456Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:25:15.499Z"}
+{"level":"verbose","message":"Upload file for Pic 5a2c31573a80df1132ff795a and 5a1937425a09da6f0663fb7c","timestamp":"2017-12-09T19:25:15.511Z"}
+{"level":"info","message":"Loading Mongoose functionality","timestamp":"2017-12-09T19:26:09.423Z"}
+{"level":"info","message":"Starting application","timestamp":"2017-12-09T19:26:09.522Z"}
+{"level":"info","message":"Creating HTTP server on port: 5000","timestamp":"2017-12-09T19:26:09.523Z"}
+{"level":"info","message":"Mongoose connected to the database","timestamp":"2017-12-09T19:26:09.539Z"}
+{"level":"info","message":"Loading Mongoose functionality","timestamp":"2017-12-09T19:26:36.054Z"}
+{"level":"info","message":"Starting application","timestamp":"2017-12-09T19:26:36.140Z"}
+{"level":"info","message":"Creating HTTP server on port: 5000","timestamp":"2017-12-09T19:26:36.140Z"}
+{"level":"info","message":"Mongoose connected to the database","timestamp":"2017-12-09T19:26:36.158Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:26:41.238Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T19:26:41.239Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:26:42.532Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:26:48.995Z"}
+{"level":"verbose","message":"Upload file for Pic 5a2c31573a80df1132ff795a and 5a1937425a09da6f0663fb7c","timestamp":"2017-12-09T19:26:49.006Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:26:51.219Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T19:26:51.219Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:26:51.839Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:26:58.537Z"}
+{"level":"verbose","message":"Upload file for Pic 5a2c31573a80df1132ff795a and 5a1937425a09da6f0663fb7c","timestamp":"2017-12-09T19:26:58.539Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:27:22.544Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T19:27:22.544Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:27:23.828Z"}
+{"level":"info","message":"Loading Mongoose functionality","timestamp":"2017-12-09T19:27:27.657Z"}
+{"level":"info","message":"Starting application","timestamp":"2017-12-09T19:27:27.738Z"}
+{"level":"info","message":"Creating HTTP server on port: 5000","timestamp":"2017-12-09T19:27:27.738Z"}
+{"level":"info","message":"Mongoose connected to the database","timestamp":"2017-12-09T19:27:27.757Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:27:32.788Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T19:27:32.791Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:27:34.939Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:27:42.917Z"}
+{"level":"verbose","message":"Upload file for Pic 5a2c31573a80df1132ff795a and 5a1937425a09da6f0663fb7c","timestamp":"2017-12-09T19:27:42.926Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:27:47.499Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T19:27:47.499Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:27:49.359Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:28:00.530Z"}
+{"level":"verbose","message":"Upload file for Pic 5a2c31573a80df1132ff795a and 5a1937425a09da6f0663fb7c","timestamp":"2017-12-09T19:28:00.534Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:28:02.339Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T19:28:02.339Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:28:02.901Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:28:13.095Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T19:28:13.095Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:31:58.387Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T19:31:58.388Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:32:01.486Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T19:32:01.486Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:33:35.892Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T19:33:35.892Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:33:36.898Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T19:33:36.898Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:35:34.739Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:35:34.869Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T19:35:34.870Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:35:51.085Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T19:35:51.085Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:36:06.621Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T19:36:06.621Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:36:10.772Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T19:36:10.772Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:36:30.823Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:36:30.918Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T19:36:30.919Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:37:16.745Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T19:37:16.745Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:37:23.847Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T19:37:23.847Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:38:08.100Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T19:38:08.100Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:39:06.997Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T19:39:06.997Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:39:12.476Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T19:39:12.476Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:39:25.343Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T19:39:25.343Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:39:35.420Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T19:39:35.420Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:39:59.114Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T19:39:59.116Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:40:24.554Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T19:40:24.554Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:40:29.368Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T19:40:29.368Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:40:32.204Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T19:40:32.204Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:42:09.601Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T19:42:09.602Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:42:18.556Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T19:42:18.557Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T19:43:55.222Z"}
+{"level":"verbose","message":"Create user","timestamp":"2017-12-09T19:43:55.223Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T20:00:37.962Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T20:10:13.520Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T20:10:13.530Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T20:10:13.614Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T20:10:14.549Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T20:10:16.395Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T20:10:22.871Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T20:10:23.004Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T20:10:23.005Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T20:10:24.214Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T20:10:26.663Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T20:10:26.683Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T20:10:26.758Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T20:10:27.054Z"}
+{"level":"info","message":"Request from ::1","timestamp":"2017-12-09T20:10:27.245Z"}
+{"level":"verbose","message":"Get all pics","timestamp":"2017-12-09T20:10:27.246Z"}

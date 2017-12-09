@@ -1,17 +1,9 @@
-.rightMargin {
-	margin-right: 10px;
+body{
+	background: #E1ECF9;
+	color: #000;
 }
 
-.topMargin{
-	margin-top: 10px;
-}
-
-ul{
-	padding: 0px;
-}
-
-.btn,
-a{
+.btn,a{
 	cursor: pointer;
 }
 
@@ -27,6 +19,64 @@ a{
 	color: #000;
 	background:#fff;
 }
+
+
+.gallery-title{
+	color: #133863;
+}
+
+.images-options{
+	background: #091D34;
+}
+
+.images-options a.btn.btn-default{
+	background: #236AB9;
+	border-color:#236AB9;
+}
+
+.images-options a.btn.btn-default:hover,
+.images-options a.btn.btn-default:focus,
+.images-options a.btn.btn-default:active{
+	color: #236AB9;
+	background:#fff;
+}
+
+
+.btn.btn-login{
+	background:#133863;
+}
+
+.btn.btn-login:hover,
+.btn.btn-login:focus,
+.btn.btn-login:active{
+	color: #133863;
+	background:transparent;
+}
+
+
+.alert.alert-success{
+    background: #236AB9;
+    color: #E1ECF9;
+}
+
+.modal-content{
+	background: #236AB9;
+	color: #091D34;
+}
+
+
+.rightMargin {
+	margin-right: 10px;
+}
+
+.topMargin{
+	margin-top: 10px;
+}
+
+ul{
+	padding: 0px;
+}
+
 
 .border-right{
 	border-right: 1px solid #000;

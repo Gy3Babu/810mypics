@@ -4,7 +4,7 @@ var Schema = Mongoose.Schema;
 var PicSchema = new Schema({
     userID:{type: Schema.Types.ObjectId, required:true },
     name:{type: String},
-    files:[{filename: String, originalName: String, dateUploaded: Date}]
+    files:[{filename: String, originalName: String, dateUploaded: Date, description: String}]
 });
 
 module.exports = Mongoose.model('pics', PicSchema);

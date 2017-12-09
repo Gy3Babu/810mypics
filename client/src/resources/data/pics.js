@@ -11,13 +11,6 @@ export class Pics {
 
 
   updateArray(pic){
-    for(var i = 0, l = this.picsArray.length; i < l; i++ ){
-      if (this.picsArray[i]._id == pic._id){
-        this.picsArray[i] = pic;
-        break;
-      }
-    }
-    this.picsArray.push(this.picsArray.pop())
   }
 
 
@@ -46,8 +39,10 @@ export class Pics {
     }
   }
 
-  async uploadFile(files, userId, picId){
+  async uploadFile(files,description,filename, userId, picId){
     let formData = new FormData();
+    formData.append('filename',filename);
+    formData.append('description',description);
      files.forEach((item, index) => {
       formData.append("file" + index, item);
     });

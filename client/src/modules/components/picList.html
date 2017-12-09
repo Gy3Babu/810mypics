@@ -15,7 +15,7 @@
       </ul>
     </div>
     <div class="col-sm-9 mimHeight">
-      <div class="card col-sm-12">
+      <div class="card col-sm-12 images-options">
          <div class="card-body text-right">
             <a click.trigger="createImages()" class="btn btn-default btn-sm rightMargin" href="#">
               <i class="fa fa-plus"></i>
@@ -27,10 +27,12 @@
       </div>
       <br><br>
       <div class="row">
-        <div class="col-sm-3" repeat.for = "file of gallerySelected.files">
+        <div class="col-sm-3 text-center" repeat.for = "file of gallerySelected.files">
             <div class="pic-container" click.trigger="selectAction(file.filename,$event)"  class.bind="(selected.indexOf(pic.filename) < 0)? '' :  'active'">
             <img src="/uploads/${user._id}/${file.filename}" class="img-fluid">
-            <strong>${file.originalName}</strong>
+            <strong>${file.description}</strong> <a click.trigger="editImage(file)" class="btn btn-default btn-sm" href="#">
+              <i class="fa fa-pencil"></i>
+            </a>
           </div>
         </div>
       </div>

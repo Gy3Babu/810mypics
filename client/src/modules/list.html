@@ -1,7 +1,7 @@
 <template>
 	<div class="topMargin">
 		<button class="btn btn-default btn-sm pull-right" click.trigger="logout()">Sing Out</button>
-		<h1 class="text-center">${message}</h1>
+		<h1 class="gallery-title text-center">${message}</h1>
 		<compose  view="./components/picList.html"></compose>
 		<div class="modal fade" id="mainModal">
 			<div class="modal-dialog">
@@ -29,26 +29,30 @@
 					</div>
 					<div class="modal-body">
 						<form>
-					    <div >
-					      <div>
-					        <label class="btn btn-secondary">
-					            Browse for files&hellip; <input type="file" 
-					            style="display: none;" 
-					            change.delegate="changeFiles()" files.bind="files">
-					        </label>
-					        <small id="fileHelp" class="form-text text-muted">
-					            Upload pic.</small>
-					      </div>  
-					      <div>
-					        <ul>
-					          <li repeat.for="file of filesToUpload" class="list-group-item">
-					            ${file.name}<span click.delegate="removeFile($index)" 
-					            class="pull-right"><i class="fa fa-trash" aria-hidden="true">
-					            </i></span></li>
-					        </ul>
-					      </div>
-								<button click.trigger="saveImages()" class="btn btn-primary topMargin">Save</button>
-					    </div>
+						    <div>
+						    	<div class="form-group">
+						    		<label>Descripción</label>
+						    		<input type="text" name="description" class="form-control" value.bind="fileDescription">
+						    	</div>
+						      <div>
+						        <label class="btn btn-secondary">
+						            Browse for files&hellip; <input type="file" 
+						            style="display: none;" 
+						            change.delegate="changeFiles()" files.bind="files">
+						        </label>
+						        <small id="fileHelp" class="form-text text-muted">
+						            Upload pic.</small>
+						      </div>  
+						      <div>
+						        <ul>
+						          <li repeat.for="file of filesToUpload" class="list-group-item">
+						            ${file.name}<span click.delegate="removeFile($index)" 
+						            class="pull-right"><i class="fa fa-trash" aria-hidden="true">
+						            </i></span></li>
+						        </ul>
+						      </div>
+									<button click.trigger="saveImages()" class="btn btn-primary topMargin">Save</button>
+						    </div>
 						</form>
 					</div>
 				</div>
