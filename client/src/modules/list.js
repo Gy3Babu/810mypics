@@ -95,7 +95,7 @@ export class Wall {
 
   editPic(pic){  
     this.picObj = pic;
-    this.modalTitle = 'Edit Pic';
+    this.modalTitle = 'Edit Gallery';
     $('#mainModal').modal();
   }
 
